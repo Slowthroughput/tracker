@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if latest_engagement_list %}
+    <ul>
+    {% for engagement in latest_engagement_list %}
+        <li><a href="/main/{{ engagement.id }}/">{{ engagement.engagement_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No engagements are available.</p>
+{% endif %}
+</body>
+</html>
